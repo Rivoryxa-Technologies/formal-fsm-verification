@@ -56,6 +56,6 @@ what we apply to real control logic, arbiters, and protocol blocks.
 
 ## What Rivoryxa delivers with this
 
-This is our public reference flow for formal verification. On client RTL we apply it at core scale: we have used the same SymbiYosys, Yosys, z3, and abc toolchain to produce an unbounded proof that a CV32E40P coverage hole (cv32e40p#1010) is unreachable, to back a coverage waiver (cv32e40p#1009) with a z3-checked software invariant, and to reproduce six closed CV32E40X bugs as counterexamples on the pre-fix RTL before proving the fixes on master. Every assert ships paired with a reachability cover so a passing proof is never vacuous, and every run is kept as evidence.
+This is our public reference flow for formal verification. On client RTL we apply the same SymbiYosys, Yosys, z3, and abc toolchain at core scale: unbounded proofs that a coverage hole is dead, coverage waivers backed by a z3 checked software invariant, and bug replays that produce a counterexample on the reported RTL and a proof on the fix. Every assert ships paired with a reachability cover so a passing proof is never vacuous, and every run is kept as evidence.
 
 See the [Rivoryxa profile](https://github.com/Rivoryxa-Technologies) for our full service list, or reach us on [LinkedIn](https://www.linkedin.com/company/rivoryxa-technologies/).
