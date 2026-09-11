@@ -1,27 +1,27 @@
 # formal-fsm-verification
 
-A small, runnable **formal verification** example: a two-way traffic-light
-controller whose safety property (the two directions are never non-red at the
+A small, runnable **formal verification** example: a two way traffic light
+controller whose safety property (the two directions are never both off red at the
 same time) is *proven exhaustively* with model checking, not just tested.
 
-It runs on free, open-source tools: [SymbiYosys](https://github.com/YosysHQ/sby)
+It runs on free, open source tools: [SymbiYosys](https://github.com/YosysHQ/sby)
 (SBY) with Yosys and an SMT solver. No commercial formal tool required.
 
-> **Verified:** the mutual-exclusion property is proven by temporal induction (Yosys + z3); bounded model checking and all cover statements pass.
+> **Verified:** the mutual exclusion property is proven by temporal induction (Yosys + z3); bounded model checking and all cover statements pass.
 
 ## Why formal
 
 Simulation shows a design works on the stimulus you happened to write. Formal
 proves a property holds for *every* reachable state and input sequence, or hands
-you a concrete counterexample. It is how we close the gap that coverage-driven
+you a concrete counterexample. It is how we close the gap that coverage driven
 simulation leaves open, especially on control logic, arbiters, and protocol FSMs.
 
 ## What is proven
 
 The properties live in `rtl/traffic_light.sv` under an `ifdef FORMAL` guard:
 
-- **Mutual exclusion (safety):** `ns` and `ew` are never both non-red. Proven by
-  unbounded k-induction, so it holds for all time, not just the first N cycles.
+- **Mutual exclusion (safety):** `ns` and `ew` are never both off red. Proven by
+  unbounded induction, so it holds for all time, not just the first N cycles.
 - **Legal encoding:** each light is only RED, GREEN, or YELLOW.
 - **Reachability (cover):** each green and yellow phase is actually reachable.
 
@@ -45,7 +45,7 @@ sby -f traffic.sby bmc      # bounded model check
 sby -f traffic.sby cover    # reachability traces
 ```
 
-The `prove` task should report `PASS`, meaning the mutual-exclusion property is
+The `prove` task should report `PASS`, meaning the mutual exclusion property is
 proven for all reachable states.
 
 ## Notes
