@@ -7,6 +7,8 @@ same time) is *proven exhaustively* with model checking, not just tested.
 It runs on free, open-source tools: [SymbiYosys](https://github.com/YosysHQ/sby)
 (SBY) with Yosys and an SMT solver. No commercial formal tool required.
 
+> **Verified:** the mutual-exclusion property is proven by temporal induction (Yosys + z3); bounded model checking and all cover statements pass.
+
 ## Why formal
 
 Simulation shows a design works on the stimulus you happened to write. Formal
