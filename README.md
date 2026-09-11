@@ -52,8 +52,10 @@ proven for all reachable states.
 
 The DUT is intentionally small so the proof is easy to follow. The same flow
 (properties under `ifdef FORMAL`, SBY tasks for bmc, induction, and cover) is
-what we apply to real control logic, arbiters, and protocol blocks. Want an
-assertion-based sign-off or a formal test plan for a specific block? Reach out.
+what we apply to real control logic, arbiters, and protocol blocks.
 
----
-Maintained by [Rivoryxa Technologies](https://www.linkedin.com/company/rivoryxa-technologies/).
+## What Rivoryxa delivers with this
+
+This is our public reference flow for formal verification. On client RTL we apply it at core scale: we have used the same SymbiYosys, Yosys, z3, and abc toolchain to produce an unbounded proof that a CV32E40P coverage hole (cv32e40p#1010) is unreachable, to back a coverage waiver (cv32e40p#1009) with a z3-checked software invariant, and to reproduce six closed CV32E40X bugs as counterexamples on the pre-fix RTL before proving the fixes on master. Every assert ships paired with a reachability cover so a passing proof is never vacuous, and every run is kept as evidence.
+
+See the [Rivoryxa profile](https://github.com/Rivoryxa-Technologies) for our full service list, or reach us on [LinkedIn](https://www.linkedin.com/company/rivoryxa-technologies/).
