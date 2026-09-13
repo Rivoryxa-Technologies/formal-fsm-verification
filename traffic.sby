@@ -10,7 +10,7 @@ cover: mode cover
 depth 20
 
 [engines]
-smtbmc
+smtbmc z3
 
 [script]
 read -formal traffic_light.sv

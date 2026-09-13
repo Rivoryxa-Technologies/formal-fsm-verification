@@ -1,0 +1,51 @@
+SBY 15:12:11 [traffic_cover] Removing directory '/private/tmp/claude-501/-Users-avishas-HVGC/154dd374-98ad-4d79-bdac-3e8d9ef2d0a3/scratchpad/repos/formal-fsm-verification/traffic_cover'.
+SBY 15:12:11 [traffic_cover] Copy '/private/tmp/claude-501/-Users-avishas-HVGC/154dd374-98ad-4d79-bdac-3e8d9ef2d0a3/scratchpad/repos/formal-fsm-verification/rtl/traffic_light.sv' to '/private/tmp/claude-501/-Users-avishas-HVGC/154dd374-98ad-4d79-bdac-3e8d9ef2d0a3/scratchpad/repos/formal-fsm-verification/traffic_cover/src/traffic_light.sv'.
+SBY 15:12:11 [traffic_cover] engine_0: smtbmc z3
+SBY 15:12:11 [traffic_cover] base: starting process "cd traffic_cover/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 15:12:11 [traffic_cover] base: finished (returncode=0)
+SBY 15:12:11 [traffic_cover] prep: starting process "cd traffic_cover/model; yosys -ql design_prep.log design_prep.ys"
+SBY 15:12:11 [traffic_cover] prep: finished (returncode=0)
+SBY 15:12:11 [traffic_cover] smt2: starting process "cd traffic_cover/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 15:12:11 [traffic_cover] smt2: finished (returncode=0)
+SBY 15:12:11 [traffic_cover] engine_0: starting process "cd traffic_cover; yosys-smtbmc -s z3 --presat -c --noprogress -t 20  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Solver: z3
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at traffic_light: c_ew_green
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at traffic_light: c_ns_green
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at traffic_light: c_ns_yellow
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Reached cover statement in step 1 at traffic_light: c_ew_yellow
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY 15:12:11 [traffic_cover] engine_0: ##   0:00:00  Status: passed
+SBY 15:12:11 [traffic_cover] engine_0: finished (returncode=0)
+SBY 15:12:11 [traffic_cover] engine_0: Status returned by engine: pass
+SBY 15:12:11 [traffic_cover] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 15:12:11 [traffic_cover] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 15:12:11 [traffic_cover] summary: engine_0 (smtbmc z3) returned pass
+SBY 15:12:11 [traffic_cover] summary: cover trace: traffic_cover/engine_0/trace0.vcd
+SBY 15:12:11 [traffic_cover] summary:   reached cover statement traffic_light.c_ew_green at traffic_light.sv:78.7-78.45 step 1
+SBY 15:12:11 [traffic_cover] summary: cover trace: traffic_cover/engine_0/trace1.vcd
+SBY 15:12:11 [traffic_cover] summary:   reached cover statement traffic_light.c_ns_green at traffic_light.sv:77.7-77.45 step 1
+SBY 15:12:11 [traffic_cover] summary: cover trace: traffic_cover/engine_0/trace2.vcd
+SBY 15:12:11 [traffic_cover] summary:   reached cover statement traffic_light.c_ns_yellow at traffic_light.sv:79.7-79.46 step 1
+SBY 15:12:11 [traffic_cover] summary: cover trace: traffic_cover/engine_0/trace3.vcd
+SBY 15:12:11 [traffic_cover] summary:   reached cover statement traffic_light.c_ew_yellow at traffic_light.sv:80.7-80.46 step 1
+SBY 15:12:11 [traffic_cover] DONE (PASS, rc=0)
