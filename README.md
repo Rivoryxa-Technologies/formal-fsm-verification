@@ -75,3 +75,16 @@ protocol state machines.
 
 See the [Rivoryxa profile](https://github.com/Rivoryxa-Technologies) or reach us on
 [LinkedIn](https://www.linkedin.com/company/rivoryxa-technologies/).
+
+---
+
+## More from Rivoryxa
+
+This repository is one public example. The method it demonstrates is applied to
+real OpenHW CORE-V issues in
+[core-v-investigation-reports](https://github.com/Rivoryxa-Technologies/core-v-investigation-reports):
+sixteen public GitHub issues taken to a disposition, each with its evidence,
+proof scope and limits written down.
+
+All examples are listed on the
+[Rivoryxa Technologies profile](https://github.com/Rivoryxa-Technologies).
